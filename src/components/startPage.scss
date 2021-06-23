@@ -1,0 +1,13 @@
+.start-page {
+    margin: 30px;
+
+    &__input {
+        width: 100%;
+        height: 30px;
+        padding-left: 10px;
+    }
+
+    &__empty-block {
+        margin-top: 20px;
+    }
+}
