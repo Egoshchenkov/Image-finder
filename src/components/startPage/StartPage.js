@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./startPage.scss";
-import SearchResultPage from "./searchResultPage";
+import "./StartPage.scss";
+import SearchResultPage from "../searchResultPage/SearchResultPage";
 import axios from "axios";
 
 function StartPage() {
@@ -18,7 +18,7 @@ function StartPage() {
 
     async function auth(e) {
         e.preventDefault();
-        const response = await axios.get(`https://api.flickr.com/services/rest?sort=relevance&parse_tags=1&content_type=7&extras=can_comment%2Ccan_print%2Ccount_comments%2Ccount_faves%2Cdescription%2Cisfavorite%2Clicense%2Cmedia%2Cneeds_interstitial%2Cowner_name%2Cpath_alias%2Crealname%2Crotation%2Curl_sq%2Curl_q%2Curl_t%2Curl_s%2Curl_n%2Curl_w%2Curl_m%2Curl_z%2Curl_c%2Curl_l&per_page=50&page=2&lang=en-US&text=${field.KeyWord}&color_codes=8&viewerNSID=&method=flickr.photos.search&csrf=&api_key=f8827807d7445e9b5fc4693a1a0efd31&format=json&hermes=1&hermesClient=1&reqId=bb057ea8&nojsoncallback=1`)
+        const response = await axios.get(`https://api.flickr.com/services/rest?sort=relevance&parse_tags=1&content_type=7&extras=can_comment%2Ccan_print%2Ccount_comments%2Ccount_faves%2Cdescription%2Cisfavorite%2Clicense%2Cmedia%2Cneeds_interstitial%2Cowner_name%2Cpath_alias%2Crealname%2Crotation%2Curl_sq%2Curl_q%2Curl_t%2Curl_s%2Curl_n%2Curl_w%2Curl_m%2Curl_z%2Curl_c%2Curl_l&per_page=25&page=2&lang=en-US&text=water&viewerNSID=&method=flickr.photos.search&csrf=&api_key=1eaf113584daa40b9dfffe8492f96e43&format=json&hermes=1&hermesClient=1&reqId=4f4bd816&nojsoncallback=1`)
         setSearchResult(response.data.photos)
     }
     
