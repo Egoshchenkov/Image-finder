@@ -1,19 +1,32 @@
 .search-result-page {
+    height: 78.5%;
+}
+
+.search-result-page__pagination {
+    text-align: end;
+    margin: 30px 45px 0 0;
+
+    &_button {
+        // height: 30px;
+        font-size: 10px;
+    }
+}
+
+.search-result-page__images {
     margin-top: 30px;
-    height: 750px;
     overflow: scroll;
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(auto-fill, 20%);
     align-items: start;
+    height: 100%;
 
-    &__image {
-        // width: 240px;
+    &_image {
         height: 155px;
         margin-bottom: 10px;
     }
 
-    &__image-box {
+    &_image-box {
         padding: 10px;
         border: 1px solid black;
         display: inline-block;
@@ -23,14 +36,19 @@
         width: 80%;
     }
 
-    &__button {
+    &_button {
         height: 30px;
         border: none;
         border-radius: 5px;
     }
 
-    &__button:hover {
+    &_button:hover {
         background-color: rgb(224, 219, 219);
         box-shadow: 0 2px 20px rgba(black,.2);
+    }
+
+    &_input {
+        margin-top: 10px;
+        border-radius: 3px;
     }
 }
