@@ -1,6 +1,5 @@
 import React from "react";
 import "./SearchResultPage.scss";
-import Button from '@material-ui/core/Button';
 
 function SearchResultPage(props) {
 
@@ -14,12 +13,12 @@ function SearchResultPage(props) {
     return (
         <div className="search-result-page">
             <section className="search-result-page__pagination">
-                <Button variant="contained" className="search-result-page__pagination_button" onClick={props.buttonBack}>Back</Button>
-                <select onChange={props.pageNumbers}>
-                    <option>Page 1 of 10</option>
-                    <option>Page 1 of 25</option>
+                <button className="search-result-page__pagination_button" onClick={props.buttonBack}>Back</button>
+                <select className="search-result-page__pagination_select" onChange={props.pageNumbers}>
+                    <option className="search-result-page__pagination_select_option">Page 1 of 10</option>
+                    <option className="search-result-page__pagination_select_option">Page 1 of 25</option>
                 </select>
-                <Button variant="contained" className="search-result-page__pagination_button" onClick={props.buttonForward}>Forward</Button>
+                <button className="search-result-page__pagination_button" onClick={props.buttonForward}>Forward</button>
             </section>
             <section className="search-result-page__images">
                 {props.searchResult.map((photo) => {
