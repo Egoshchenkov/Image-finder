@@ -1,77 +1,90 @@
 .search-result-page {
     height: 78.5%;
     text-align: end;
-}
 
-.search-result-page__pagination {
-    margin: 30px 65px 0 0;
-    border: 1px solid black;
-    display: inline-block;
-    border-radius: 10px;
-
-    &_button {
-        height: 40px;
-        font-size: 16px;
-        background-color: rgb(247, 240, 240);
-        width: 100px;
-        border: none;
-        border-radius: 10px;
-    }
-
-    &_button:hover {
-        background-color: rgb(224, 219, 219);
-    }
-
-    &_select {
-        height: 40px;
-        font-size: 16px;
-        border-top: none;
-        border-bottom: none;
-
-        &_option {
-            font-size: 16px;
-        }
-    }
-}
-
-.search-result-page__images {
-    margin-top: 30px;
-    overflow: scroll;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fill, 20%);
-    align-items: start;
-    grid-template-rows: repeat(auto-fill, 274px);
-    height: 100%;
-
-    &_image {
-        height: 155px;
-        margin-bottom: 10px;
-    }
-
-    &_image-box {
-        padding: 10px;
+    &__pagination {
+        margin: 30px 65px 0 0;
         border: 1px solid black;
         display: inline-block;
-        margin: 0 20px 20px 0;
-        display: flex;
-        flex-direction: column;
-        width: 80%;
+        border-radius: 10px;
+    
+        &_button {
+            
+            &-1 {
+                height: 40px;
+                font-size: 16px;
+                background-color: rgb(247, 240, 240);
+                width: 100px;
+                border: none;
+                border-radius: 10px 0 0 10px;
+            }
+    
+            &-2 {
+                height: 40px;
+                font-size: 16px;
+                background-color: rgb(247, 240, 240);
+                width: 100px;
+                border: none;
+                border-radius: 0 10px 10px 0;
+            }
+        }
+    
+        &_button:hover {
+            background-color: rgb(224, 219, 219);
+        }
+    
+        &_select {
+            height: 40px;
+            font-size: 16px;
+            border-top: none;
+            border-bottom: none;
+    
+            &_option {
+                font-size: 16px;
+            }
+        }
     }
 
-    &_button {
-        height: 30px;
-        border: none;
-        border-radius: 5px;
-    }
-
-    &_button:hover {
-        background-color: rgb(224, 219, 219);
-        box-shadow: 0 2px 20px rgba(black,.2);
-    }
-
-    &_input {
-        margin-top: 10px;
-        border-radius: 3px;
+    &__images {
+        margin-top: 30px;
+        overflow: scroll;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(auto-fill, 20%);
+        align-items: start;
+        grid-template-rows: repeat(auto-fill, 274px);
+        height: 100%;
+    
+        &_image {
+            height: 155px;
+            margin-bottom: 10px;
+        }
+    
+        &_image-box {
+            padding: 10px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 0 20px 20px 0;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+    
+        &_button {
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgb(247, 240, 240);
+        }
+    
+        &_button:hover {
+            background-color: rgb(224, 219, 219);
+            box-shadow: 0 2px 20px rgba(black,.2);
+        }
+    
+        &_input {
+            margin-top: 10px;
+            border-radius: 3px;
+            width: 100%;
+        }
     }
 }
