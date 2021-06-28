@@ -10,6 +10,7 @@ function CollectionPage() {
         const imageFinderPhotoCollection = JSON.parse(localStorage.imageFinderPhotoCollection)
         for (var key in imageFinderPhotoCollection) {newPhotoCollection.push(imageFinderPhotoCollection[key])}
         setState(newPhotoCollection)
+        // eslint-disable-next-line
     }, [])
 
     function removePhoto(e) {
